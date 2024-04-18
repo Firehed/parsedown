@@ -9,7 +9,7 @@ class ParsedownTest extends TestCase
 
     public function setUp(): void
     {
-        $this->ParseDown = new TestParsedown();
+        $this->Parsedown = new TestParsedown();
     }
 
     /**
