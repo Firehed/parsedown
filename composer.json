@@ -25,12 +25,17 @@
         "analyze": [
             "@phpstan"
         ],
+        "lint": [
+            "@phpcs"
+        ],
+        "phpcs": "phpcs",
         "phpstan": "phpstan",
         "phpunit": "phpunit",
         "unit": "@phpunit",
         "test": [
             "@unit",
-            "@analyze"
+            "@analyze",
+            "@lint"
         ]
     },
     "autoload": {
