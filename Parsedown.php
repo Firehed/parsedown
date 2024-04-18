@@ -22,7 +22,7 @@ class Parsedown
     private static $instances = array();
 
     protected bool $breaksEnabled;
-    protected $markupEscaped;
+    protected bool $markupEscaped;
     protected $urlsLinked = true;
     protected $safeMode;
     protected $strictMode;
@@ -166,7 +166,7 @@ class Parsedown
         return $this;
     }
 
-    function setMarkupEscaped($markupEscaped)
+    public function setMarkupEscaped(bool $markupEscaped): self
     {
         $this->markupEscaped = $markupEscaped;
 
