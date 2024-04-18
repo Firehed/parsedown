@@ -701,56 +701,6 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Method Parsedown\\:\\:setBreaksEnabled\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:setBreaksEnabled\\(\\) has parameter \\$breaksEnabled with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:setMarkupEscaped\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:setMarkupEscaped\\(\\) has parameter \\$markupEscaped with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:setSafeMode\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:setSafeMode\\(\\) has parameter \\$safeMode with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:setStrictMode\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:setStrictMode\\(\\) has parameter \\$strictMode with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:setUrlsLinked\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:setUrlsLinked\\(\\) has parameter \\$urlsLinked with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Method Parsedown\\:\\:striAtStart\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: Parsedown.php
@@ -851,11 +801,6 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Property Parsedown\\:\\:\\$breaksEnabled has no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Property Parsedown\\:\\:\\$inlineMarkerList has no type specified\\.$#"
 			count: 1
 			path: Parsedown.php
@@ -866,32 +811,12 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Property Parsedown\\:\\:\\$markupEscaped has no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Property Parsedown\\:\\:\\$regexHtmlAttribute has no type specified\\.$#"
 			count: 1
 			path: Parsedown.php
 
 		-
-			message: "#^Property Parsedown\\:\\:\\$safeLinksWhitelist has no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Property Parsedown\\:\\:\\$safeMode has no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Property Parsedown\\:\\:\\$specialCharacters has no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Property Parsedown\\:\\:\\$strictMode has no type specified\\.$#"
 			count: 1
 			path: Parsedown.php
 
@@ -902,11 +827,6 @@ parameters:
 
 		-
 			message: "#^Property Parsedown\\:\\:\\$unmarkedBlockTypes has no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Property Parsedown\\:\\:\\$urlsLinked has no type specified\\.$#"
 			count: 1
 			path: Parsedown.php
 
