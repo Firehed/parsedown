@@ -1,7 +1,5 @@
 <?php
 
-require 'SampleExtensions.php';
-
 use PHPUnit\Framework\TestCase;
 
 /**
