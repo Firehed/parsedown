@@ -21,7 +21,7 @@ class Parsedown
 
     private static $instances = array();
 
-    protected $breaksEnabled;
+    protected bool $breaksEnabled;
     protected $markupEscaped;
     protected $urlsLinked = true;
     protected $safeMode;
@@ -159,7 +159,7 @@ class Parsedown
     # Setters
     #
 
-    function setBreaksEnabled($breaksEnabled)
+    public function setBreaksEnabled(bool $breaksEnabled): self
     {
         $this->breaksEnabled = $breaksEnabled;
 
