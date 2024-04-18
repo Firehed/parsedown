@@ -19,9 +19,7 @@ class Parsedown
 
     const version = '1.8.0-beta-7';
 
-    private static $instances = array();
-
-    protected bool $breaksEnabled = false;
+    public bool $breaksEnabled = false;
     protected bool $markupEscaped = false;
     protected bool $urlsLinked = true;
     protected bool $safeMode = false; // ?!
@@ -126,7 +124,7 @@ class Parsedown
 
     # ~
 
-    function text($text)
+    public function text(string $text): string
     {
         $Elements = $this->textElements($text);
 
@@ -139,7 +137,7 @@ class Parsedown
         return $markup;
     }
 
-    protected function textElements($text)
+    protected function textElements(string $text)
     {
         # make sure no definitions are set
         $this->DefinitionData = array();
@@ -155,17 +153,6 @@ class Parsedown
 
         # iterate through lines to identify blocks
         return $this->linesElements($lines);
-    }
-
-    #
-    # Setters
-    #
-
-    public function setBreaksEnabled(bool $breaksEnabled): self
-    {
-        $this->breaksEnabled = $breaksEnabled;
-
-        return $this;
     }
 
     public function setMarkupEscaped(bool $markupEscaped): self
@@ -1887,7 +1874,7 @@ class Parsedown
     # Deprecated Methods
     #
 
-    function parse($text)
+    public function parse(string $text): string
     {
         $markup = $this->text($text);
 
@@ -1952,12 +1939,12 @@ class Parsedown
     # Static Methods
     #
 
-    protected static function escape($text, $allowQuotes = false)
+    protected static function escape(string $text, bool $allowQuotes = false): string
     {
         return htmlspecialchars($text, $allowQuotes ? ENT_NOQUOTES : ENT_QUOTES, 'UTF-8');
     }
 
-    protected static function striAtStart($string, $needle)
+    protected static function striAtStart(string $string, string $needle): bool
     {
         $len = strlen($needle);
 
@@ -1970,23 +1957,4 @@ class Parsedown
             return strtolower(substr($string, 0, $len)) === strtolower($needle);
         }
     }
-
-    static function instance($name = 'default')
-    {
-        if (isset(self::$instances[$name]))
-        {
-            return self::$instances[$name];
-        }
-
-        $instance = new static();
-
-        self::$instances[$name] = $instance;
-
-        return $instance;
-    }
-
-    #
-    # Fields
-    #
-
 }
