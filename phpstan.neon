@@ -1,0 +1,15 @@
+includes:
+    # - phpstan-baseline.neon
+    # - vendor/phpstan/phpstan-phpunit/extension.neon
+    # - vendor/phpstan/phpstan-strict-rules/rules.neon
+parameters:
+    ignoreErrors:
+        - '#^Only booleans are allowed in an if condition, \(SimpleXMLElement\|null\) given.$#'
+        - '#^Dynamic call to static method PHPUnit\\Framework\\Assert::assert#'
+    level: max
+    paths:
+        - .
+    excludePaths:
+        - vendor
+
+# vim: ft=yaml
