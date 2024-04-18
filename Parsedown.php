@@ -21,8 +21,8 @@ class Parsedown
 
     private static $instances = array();
 
-    protected bool $breaksEnabled;
-    protected bool $markupEscaped;
+    protected bool $breaksEnabled = false;
+    protected bool $markupEscaped = false;
     protected $urlsLinked = true;
     protected $safeMode;
     protected $strictMode;
