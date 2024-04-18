@@ -636,16 +636,6 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Method Parsedown\\:\\:parse\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:parse\\(\\) has parameter \\$text with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Method Parsedown\\:\\:pregReplaceElements\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: Parsedown.php
@@ -676,22 +666,7 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Method Parsedown\\:\\:text\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:text\\(\\) has parameter \\$text with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Method Parsedown\\:\\:textElements\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:textElements\\(\\) has parameter \\$text with no type specified\\.$#"
 			count: 1
 			path: Parsedown.php
 
@@ -907,6 +882,11 @@ parameters:
 
 		-
 			message: "#^Method ParsedownTest\\:\\:test_no_markup\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: test/ParsedownTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of method Parsedown\\:\\:text\\(\\) expects string, string\\|false given\\.$#"
 			count: 1
 			path: test/ParsedownTest.php
 
