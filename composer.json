@@ -17,10 +17,20 @@
         "ext-mbstring": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10"
+        "phpunit/phpunit": "^10",
+        "phpstan/phpstan": "^1.10"
     },
     "scripts": {
-        "test": "phpunit"
+        "analyze": [
+            "@phpstan"
+        ],
+        "phpstan": "phpstan",
+        "phpunit": "phpunit",
+        "unit": "@phpunit",
+        "test": [
+            "@unit",
+            "@analyze"
+        ]
     },
     "autoload": {
         "psr-0": {"Parsedown": ""}

@@ -5,13 +5,13 @@
  *
  * @link http://commonmark.org/ CommonMark
  */
-class CommonMarkTestStrict extends PHPUnit_Framework_TestCase
+class CommonMarkTestStrict extends \PHPUnit\Framework\TestCase
 {
     const SPEC_URL = 'https://raw.githubusercontent.com/jgm/CommonMark/master/spec.txt';
 
     protected $parsedown;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->parsedown = new TestParsedown();
         $this->parsedown->setUrlsLinked(false);
