@@ -26,7 +26,9 @@ class Parsedown
     protected bool $urlsLinked = true;
     protected bool $safeMode = false; // ?!
     protected bool $strictMode = false;
-    protected $safeLinksWhitelist = array(
+
+    /** @var string[] */
+    protected const SAFE_LINKS_ALLOW_LIST = [
         'http://',
         'https://',
         'ftp://',
@@ -42,7 +44,7 @@ class Parsedown
         'ssh:',
         'news:',
         'steam:',
-    );
+    ];
 
     protected $BlockTypes = array(
         '#' => array('Header'),
@@ -1933,7 +1935,7 @@ class Parsedown
 
     protected function filterUnsafeUrlInAttribute(array $Element, $attribute)
     {
-        foreach ($this->safeLinksWhitelist as $scheme)
+        foreach (self::SAFE_LINKS_ALLOW_LIST as $scheme)
         {
             if (self::striAtStart($Element['attributes'][$attribute], $scheme))
             {
