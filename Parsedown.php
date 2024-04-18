@@ -19,8 +19,6 @@ class Parsedown
 
     const version = '1.8.0-beta-7';
 
-    private static $instances = array();
-
     protected bool $breaksEnabled = false;
     protected bool $markupEscaped = false;
     protected bool $urlsLinked = true;
@@ -1952,12 +1950,12 @@ class Parsedown
     # Static Methods
     #
 
-    protected static function escape($text, $allowQuotes = false)
+    protected static function escape(string $text, bool $allowQuotes = false): string
     {
         return htmlspecialchars($text, $allowQuotes ? ENT_NOQUOTES : ENT_QUOTES, 'UTF-8');
     }
 
-    protected static function striAtStart($string, $needle)
+    protected static function striAtStart(string $string, string $needle): bool
     {
         $len = strlen($needle);
 
@@ -1971,22 +1969,11 @@ class Parsedown
         }
     }
 
-    static function instance($name = 'default')
+    /**
+     * @deprecated
+     */
+    public static function instance($name = 'default'): Parsedown
     {
-        if (isset(self::$instances[$name]))
-        {
-            return self::$instances[$name];
-        }
-
-        $instance = new static();
-
-        self::$instances[$name] = $instance;
-
-        return $instance;
+        return new Parsedown();
     }
-
-    #
-    # Fields
-    #
-
 }
