@@ -17,7 +17,7 @@ class Parsedown
 {
     # ~
 
-    const version = '1.8.0-beta-7';
+    public const VERSION = '1.8.0-beta-7';
 
     public bool $breaksEnabled = false;
     protected bool $markupEscaped = false;
@@ -1609,10 +1609,9 @@ class Parsedown
 
         if (isset($Element['text'])) {
             $text = $Element['text'];
-        }
-        // very strongly consider an alternative if you're writing an
-        // extension
-        elseif (isset($Element['rawHtml'])) {
+        } elseif (isset($Element['rawHtml'])) {
+            // very strongly consider an alternative if you're writing an
+            // extension
             $text = $Element['rawHtml'];
 
             $allowRawHtmlInSafeMode = isset($Element['allowRawHtmlInSafeMode']) && $Element['allowRawHtmlInSafeMode'];
@@ -1751,9 +1750,8 @@ class Parsedown
                 # filter out badly parsed attribute
                 if (! preg_match($goodAttribute, $att)) {
                     unset($Element['attributes'][$att]);
-                }
+                } elseif (self::striAtStart($att, 'on')) {
                 # dump onevent attribute
-                elseif (self::striAtStart($att, 'on')) {
                     unset($Element['attributes'][$att]);
                 }
             }
