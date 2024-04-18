@@ -5,35 +5,11 @@ use PHPUnit\Framework\TestCase;
 
 class ParsedownTest extends TestCase
 {
-    final function __construct($name = null, array $data = array(), $dataName = '')
+    protected Parsedown $Parsedown;
+
+    public function setUp(): void
     {
-        $this->dirs = $this->initDirs();
-        $this->Parsedown = $this->initParsedown();
-
-        parent::__construct($name, $data, $dataName);
-    }
-
-    private $dirs;
-    protected $Parsedown;
-
-    /**
-     * @return array
-     */
-    protected function initDirs()
-    {
-        $dirs []= dirname(__FILE__).'/data/';
-
-        return $dirs;
-    }
-
-    /**
-     * @return Parsedown
-     */
-    protected function initParsedown()
-    {
-        $Parsedown = new TestParsedown();
-
-        return $Parsedown;
+        $this->ParseDown = new TestParsedown();
     }
 
     /**
@@ -92,11 +68,12 @@ class ParsedownTest extends TestCase
         $this->assertEquals($expectedSafeMarkup, $actualSafeMarkup);
     }
 
-    function data()
+    static function data()
     {
         $data = array();
 
-        foreach ($this->dirs as $dir)
+        $dirs = [__DIR__ . '/data/'];
+        foreach ($dirs as $dir)
         {
             $Folder = new DirectoryIterator($dir);
 
