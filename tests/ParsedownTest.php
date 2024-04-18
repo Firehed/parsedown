@@ -19,7 +19,7 @@ class ParsedownTest extends TestCase
      * @param $test
      * @param $dir
      */
-    function test_($test, $dir)
+    public function testTextRender($test, $dir)
     {
         $markdown = file_get_contents($dir . $test . '.md');
 
@@ -36,7 +36,7 @@ class ParsedownTest extends TestCase
         $this->assertEquals($expectedMarkup, $actualMarkup);
     }
 
-    function testRawHtml()
+    public function testRawHtml()
     {
         $markdown = "```php\nfoobar\n```";
         $expectedMarkup = '<pre><code class="language-php"><p>foobar</p></code></pre>';
@@ -53,7 +53,7 @@ class ParsedownTest extends TestCase
         $this->assertEquals($expectedSafeMarkup, $actualSafeMarkup);
     }
 
-    function testTrustDelegatedRawHtml()
+    public function testTrustDelegatedRawHtml()
     {
         $markdown = "```php\nfoobar\n```";
         $expectedMarkup = '<pre><code class="language-php"><p>foobar</p></code></pre>';
@@ -70,7 +70,7 @@ class ParsedownTest extends TestCase
         $this->assertEquals($expectedSafeMarkup, $actualSafeMarkup);
     }
 
-    static function data()
+    public static function data()
     {
         $data = array();
 
@@ -104,7 +104,7 @@ class ParsedownTest extends TestCase
         return $data;
     }
 
-    public function test_no_markup()
+    public function testNoMarkup()
     {
         $markdownWithHtml = <<<MARKDOWN_WITH_MARKUP
 <div>_content_</div>
