@@ -19,7 +19,7 @@ class Parsedown
 
     const version = '1.8.0-beta-7';
 
-    protected bool $breaksEnabled = false;
+    public bool $breaksEnabled = false;
     protected bool $markupEscaped = false;
     protected bool $urlsLinked = true;
     protected bool $safeMode = false; // ?!
@@ -153,17 +153,6 @@ class Parsedown
 
         # iterate through lines to identify blocks
         return $this->linesElements($lines);
-    }
-
-    #
-    # Setters
-    #
-
-    public function setBreaksEnabled(bool $breaksEnabled): self
-    {
-        $this->breaksEnabled = $breaksEnabled;
-
-        return $this;
     }
 
     public function setMarkupEscaped(bool $markupEscaped): self
