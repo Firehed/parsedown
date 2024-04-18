@@ -1968,12 +1968,4 @@ class Parsedown
             return strtolower(substr($string, 0, $len)) === strtolower($needle);
         }
     }
-
-    /**
-     * @deprecated
-     */
-    public static function instance($name = 'default'): Parsedown
-    {
-        return new Parsedown();
-    }
 }
