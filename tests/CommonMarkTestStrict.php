@@ -7,7 +7,7 @@
  */
 class CommonMarkTestStrict extends \PHPUnit\Framework\TestCase
 {
-    const SPEC_URL = 'https://raw.githubusercontent.com/jgm/CommonMark/master/spec.txt';
+    public const SPEC_URL = 'https://raw.githubusercontent.com/jgm/CommonMark/master/spec.txt';
 
     protected $parsedown;
 

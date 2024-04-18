@@ -11,13 +11,13 @@
          failOnWarning="true">
     <testsuites>
         <testsuite name="default">
-            <directory>test</directory>
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
 
     <coverage>
         <include>
-            <file>Parsedown.php</file>
+            <directory suffix=".php">src</directory>
         </include>
     </coverage>
 </phpunit>
