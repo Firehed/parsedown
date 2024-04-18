@@ -23,7 +23,7 @@ class Parsedown
 
     protected bool $breaksEnabled = false;
     protected bool $markupEscaped = false;
-    protected $urlsLinked = true;
+    protected bool $urlsLinked = true;
     protected $safeMode;
     protected $strictMode;
     protected $safeLinksWhitelist = array(
@@ -174,7 +174,7 @@ class Parsedown
     }
 
 
-    function setUrlsLinked($urlsLinked)
+    public function setUrlsLinked(bool $urlsLinked): self
     {
         $this->urlsLinked = $urlsLinked;
 
