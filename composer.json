@@ -39,14 +39,13 @@
         ]
     },
     "autoload": {
-        "psr-0": {"Parsedown": ""}
+        "psr-4": {
+            "": "src"
+        }
     },
     "autoload-dev": {
-        "psr-0": {
-            "TestParsedown": "test/",
-            "ParsedownTest": "test/",
-            "CommonMarkTest": "test/",
-            "CommonMarkTestWeak": "test/"
+        "psr-4": {
+            "": "tests"
         }
     }
 }
