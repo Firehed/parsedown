@@ -11,7 +11,7 @@ class CommonMarkTestStrict extends \PHPUnit\Framework\TestCase
 
     protected $parsedown;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->parsedown = new TestParsedown();
         $this->parsedown->setUrlsLinked(false);

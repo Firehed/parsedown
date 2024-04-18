@@ -931,11 +931,6 @@ parameters:
 			path: test/CommonMarkTestStrict.php
 
 		-
-			message: "#^Method CommonMarkTestStrict\\:\\:setUp\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: test/CommonMarkTestStrict.php
-
-		-
 			message: "#^Method CommonMarkTestStrict\\:\\:testExample\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: test/CommonMarkTestStrict.php
