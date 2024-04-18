@@ -1,7 +1,5 @@
 <?php
 
-require_once(__DIR__ . '/CommonMarkTestStrict.php');
-
 /**
  * Test Parsedown against the CommonMark spec, but less aggressive
  *
