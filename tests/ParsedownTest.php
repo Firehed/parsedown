@@ -1,4 +1,5 @@
 <?php
+
 require 'SampleExtensions.php';
 
 use PHPUnit\Framework\TestCase;
@@ -43,7 +44,7 @@ class ParsedownTest extends TestCase
         $expectedMarkup = '<pre><code class="language-php"><p>foobar</p></code></pre>';
         $expectedSafeMarkup = '<pre><code class="language-php">&lt;p&gt;foobar&lt;/p&gt;</code></pre>';
 
-        $unsafeExtension = new UnsafeExtension;
+        $unsafeExtension = new UnsafeExtension();
         $actualMarkup = $unsafeExtension->text($markdown);
 
         $this->assertEquals($expectedMarkup, $actualMarkup);
@@ -60,7 +61,7 @@ class ParsedownTest extends TestCase
         $expectedMarkup = '<pre><code class="language-php"><p>foobar</p></code></pre>';
         $expectedSafeMarkup = $expectedMarkup;
 
-        $unsafeExtension = new TrustDelegatedExtension;
+        $unsafeExtension = new TrustDelegatedExtension();
         $actualMarkup = $unsafeExtension->text($markdown);
 
         $this->assertEquals($expectedMarkup, $actualMarkup);
@@ -76,16 +77,13 @@ class ParsedownTest extends TestCase
         $data = array();
 
         $dirs = [__DIR__ . '/data/'];
-        foreach ($dirs as $dir)
-        {
+        foreach ($dirs as $dir) {
             $Folder = new DirectoryIterator($dir);
 
-            foreach ($Folder as $File)
-            {
+            foreach ($Folder as $File) {
                 /** @var $File DirectoryIterator */
 
-                if ( ! $File->isFile())
-                {
+                if (! $File->isFile()) {
                     continue;
                 }
 
@@ -93,16 +91,14 @@ class ParsedownTest extends TestCase
 
                 $extension = pathinfo($filename, PATHINFO_EXTENSION);
 
-                if ($extension !== 'md')
-                {
+                if ($extension !== 'md') {
                     continue;
                 }
 
                 $basename = $File->getBasename('.md');
 
-                if (file_exists($dir . $basename . '.html'))
-                {
-                    $data []= array($basename, $dir);
+                if (file_exists($dir . $basename . '.html')) {
+                    $data [] = array($basename, $dir);
                 }
             }
         }
