@@ -17,7 +17,7 @@
 
     <coverage>
         <include>
-            <directory suffix=".php">.</directory>
+            <file>Parsedown.php</file>
         </include>
     </coverage>
 </phpunit>
