@@ -25,7 +25,7 @@ class Parsedown
     protected bool $markupEscaped = false;
     protected bool $urlsLinked = true;
     protected bool $safeMode = false; // ?!
-    protected $strictMode;
+    protected bool $strictMode = false;
     protected $safeLinksWhitelist = array(
         'http://',
         'https://',
@@ -189,9 +189,9 @@ class Parsedown
     }
 
 
-    function setStrictMode($strictMode)
+    public function setStrictMode(bool $strictMode): self
     {
-        $this->strictMode = (bool) $strictMode;
+        $this->strictMode = $strictMode;
 
         return $this;
     }
