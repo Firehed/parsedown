@@ -3,6 +3,9 @@ require 'SampleExtensions.php';
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @covers ParseDown
+ */
 class ParsedownTest extends TestCase
 {
     protected Parsedown $Parsedown;
