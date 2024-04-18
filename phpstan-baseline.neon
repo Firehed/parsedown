@@ -356,21 +356,6 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Method Parsedown\\:\\:escape\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:escape\\(\\) has parameter \\$allowQuotes with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:escape\\(\\) has parameter \\$text with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Method Parsedown\\:\\:extractElement\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: Parsedown.php
@@ -546,16 +531,6 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Method Parsedown\\:\\:instance\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:instance\\(\\) has parameter \\$name with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Method Parsedown\\:\\:isBlockCompletable\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: Parsedown.php
@@ -701,21 +676,6 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Method Parsedown\\:\\:striAtStart\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:striAtStart\\(\\) has parameter \\$needle with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Method Parsedown\\:\\:striAtStart\\(\\) has parameter \\$string with no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Method Parsedown\\:\\:text\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: Parsedown.php
@@ -806,11 +766,6 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Property Parsedown\\:\\:\\$instances has no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
 			message: "#^Property Parsedown\\:\\:\\$regexHtmlAttribute has no type specified\\.$#"
 			count: 1
 			path: Parsedown.php
@@ -832,11 +787,6 @@ parameters:
 
 		-
 			message: "#^Property Parsedown\\:\\:\\$voidElements has no type specified\\.$#"
-			count: 1
-			path: Parsedown.php
-
-		-
-			message: "#^Unsafe usage of new static\\(\\)\\.$#"
 			count: 1
 			path: Parsedown.php
 
@@ -927,11 +877,6 @@ parameters:
 
 		-
 			message: "#^Method ParsedownTest\\:\\:data\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: test/ParsedownTest.php
-
-		-
-			message: "#^Method ParsedownTest\\:\\:testLateStaticBinding\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: test/ParsedownTest.php
 
