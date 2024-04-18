@@ -976,11 +976,6 @@ parameters:
 			path: test/CommonMarkTestWeak.php
 
 		-
-			message: "#^Method CommonMarkTestWeak\\:\\:setUp\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: test/CommonMarkTestWeak.php
-
-		-
 			message: "#^Method CommonMarkTestWeak\\:\\:testExample\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: test/CommonMarkTestWeak.php
