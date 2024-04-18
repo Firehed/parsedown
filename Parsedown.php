@@ -124,7 +124,7 @@ class Parsedown
 
     # ~
 
-    function text($text)
+    public function text(string $text): string
     {
         $Elements = $this->textElements($text);
 
@@ -137,7 +137,7 @@ class Parsedown
         return $markup;
     }
 
-    protected function textElements($text)
+    protected function textElements(string $text)
     {
         # make sure no definitions are set
         $this->DefinitionData = array();
@@ -1885,7 +1885,7 @@ class Parsedown
     # Deprecated Methods
     #
 
-    function parse($text)
+    public function parse(string $text): string
     {
         $markup = $this->text($text);
 
