@@ -21,9 +21,15 @@
         "phpstan/phpstan": "^1.10"
     },
     "scripts": {
+        "analyze": [
+            "@phpstan"
+        ],
+        "phpstan": "phpstan",
+        "phpunit": "phpunit",
+        "unit": "@phpunit",
         "test": [
-            "phpunit",
-            "phpstan"
+            "@unit",
+            "@analyze"
         ]
     },
     "autoload": {
