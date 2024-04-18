@@ -5,7 +5,7 @@
  *
  * @link http://commonmark.org/ CommonMark
  */
-class CommonMarkTestStrict extends PHPUnit_Framework_TestCase
+class CommonMarkTestStrict extends \PHPUnit\Framework\TestCase
 {
     const SPEC_URL = 'https://raw.githubusercontent.com/jgm/CommonMark/master/spec.txt';
 

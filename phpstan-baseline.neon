@@ -926,16 +926,6 @@ parameters:
 			path: Parsedown.php
 
 		-
-			message: "#^Call to an undefined method CommonMarkTestStrict\\:\\:assertEquals\\(\\)\\.$#"
-			count: 1
-			path: test/CommonMarkTestStrict.php
-
-		-
-			message: "#^Call to an undefined method CommonMarkTestStrict\\:\\:fail\\(\\)\\.$#"
-			count: 1
-			path: test/CommonMarkTestStrict.php
-
-		-
 			message: "#^Method CommonMarkTestStrict\\:\\:data\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: test/CommonMarkTestStrict.php
@@ -976,19 +966,9 @@ parameters:
 			path: test/CommonMarkTestStrict.php
 
 		-
-			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, string\\|false given\\.$#"
-			count: 1
-			path: test/CommonMarkTestStrict.php
-
-		-
 			message: "#^Property CommonMarkTestStrict\\:\\:\\$parsedown has no type specified\\.$#"
 			count: 1
 			path: test/CommonMarkTestStrict.php
-
-		-
-			message: "#^Call to an undefined method CommonMarkTestWeak\\:\\:assertEquals\\(\\)\\.$#"
-			count: 1
-			path: test/CommonMarkTestWeak.php
 
 		-
 			message: "#^Method CommonMarkTestWeak\\:\\:cleanupHtml\\(\\) has no return type specified\\.$#"
